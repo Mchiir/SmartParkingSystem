@@ -24,6 +24,7 @@ private:
     double truckRate{2000.0};
 
     // Clean structural helper functions for parsing user inputs safely
+    bool isValidPlateNumber(const std::string& plate);
     std::string readStringInput(const std::string& prompt);
     int readIntInput(const std::string& prompt);
     double readDoubleInput(const std::string& prompt);

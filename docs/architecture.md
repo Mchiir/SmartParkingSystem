@@ -2,9 +2,12 @@
 
 ```mermaid
 graph TD
-    A[User Selects a Menu Option] --> B{System Checks Selected Action}
+    START([Start]) --> A[User Selects a Menu Option]
+
+    A --> B{System Checks Selected Action}
 
     B -->|Option 0| Z[Exit System]
+    Z --> STOP([Stop])
 
     B -->|Option 1 & 2| C[Manage Parking Slots]
     B -->|Option 3| D[Vehicle Entry Process]

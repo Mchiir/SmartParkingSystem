@@ -10,6 +10,30 @@
 #include <iomanip>
 #include <algorithm>
 #include <limits>
+#include <cctype>
+
+/*
+ * Helper utility function to validate plate number structural format
+ * Rules: 7-long string (First 3 letters, 3 digits, 1 letter last)
+ */
+bool ParkingSystem::isValidPlateNumber(const std::string& plate) {
+    if (plate.length() != 7) return false;
+
+    // Check first 3 characters are letters
+    for (int i = 0; i < 3; ++i) {
+        if (!std::isalpha(static_cast<unsigned char>(plate[i]))) return false;
+    }
+
+    // Check middle 3 characters are digits
+    for (int i = 3; i < 6; ++i) {
+        if (!std::isdigit(static_cast<unsigned char>(plate[i]))) return false;
+    }
+
+    // Check last character is a letter
+    if (!std::isalpha(static_cast<unsigned char>(plate[6]))) return false;
+
+    return true;
+}
 
 /*
  * Helper utility function to securely read strings
@@ -110,8 +134,13 @@ void ParkingSystem::updateParkingSlot() {
  * Map persistence insertion is O(1).
  */
 void ParkingSystem::registerVehicleEntry() {
-    std::string plate = readStringInput("Enter Vehicle Registration Plate Number: ");
+    std::string plate = readStringInput("Enter Vehicle Registration Plate Number (E.g: RAC123A): ");
     if (plate.empty()) throw ParkingException("Plate registration entry cannot be blank.");
+
+    // Validation pattern configuration validation check (7-long: 3 letters, 3 digits, 1 letter)
+    if (!isValidPlateNumber(plate)) {
+        throw ParkingException("Validation Error: Plate sequence " + plate + " is structurally invalid. Use format: ABC123D");
+    }
 
     // Validation check preventing duplicate entries
     if (activeVehicles.find(plate) != activeVehicles.end()) {
