@@ -1,0 +1,28 @@
+{
+    "slots": [
+        { "id": "RCA-FRONT-001", "zone": "RCA-FRONT", "vehicle_type": "CAR" },
+        { "id": "RCA-BACK-002", "zone": "RCA-BACK", "vehicle_type": "MOTORCYCLE" },
+        { "id": "RCA-MIDDLE-003", "zone": "RCA-MIDDLE", "vehicle_type": "TRUCK" },
+        { "id": "RCA-SIDE-004", "zone": "RCA-SIDE", "vehicle_type": "CAR" },
+        { "id": "RCA-ENTRANCE-005", "zone": "RCA-ENTRANCE", "vehicle_type": "MOTORCYCLE" }
+    ],
+    "vehicles": [
+        { "plate_number": "CAR001", "vehicle_type": "CAR" },
+        { "plate_number": "CAR002", "vehicle_type": "CAR" },
+        { "plate_number": "CAR003", "vehicle_type": "CAR" },
+        { "plate_number": "MOT001", "vehicle_type": "MOTORCYCLE" },
+        { "plate_number": "MOT002", "vehicle_type": "MOTORCYCLE" },
+        { "plate_number": "TRUCK001", "vehicle_type": "TRUCK" },
+        { "plate_number": "TRUCK002", "vehicle_type": "TRUCK" },
+        { "plate_number": "TRUCK003", "vehicle_type": "TRUCK" },
+        { "plate_number": "MOT003", "vehicle_type": "MOTORCYCLE" },
+        { "plate_number": "CAR004", "vehicle_type": "CAR" }
+    ],
+    "prices": [
+        { "MOTORCYCLE": "500", "CAR": "1000", "TRUCK": "2000" },
+        { "MOTORCYCLE": "600", "CAR": "1200", "TRUCK": "2500" },
+        { "MOTORCYCLE": "700", "CAR": "1400", "TRUCK": "3000" },
+        { "MOTORCYCLE": "800", "CAR": "1600", "TRUCK": "3500" },
+        { "MOTORCYCLE": "900", "CAR": "1800", "TRUCK": "4000" }
+    ]
+}
