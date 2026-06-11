@@ -74,7 +74,7 @@ build\SmartParkingSystem.exe
 ## Operational Workflow Reference Guide
 
 - Initialize Slots (Option 1): Set up test spaces (e.g., RCA-FRONT-001, RCA-FRONT, Type 1 [Car]).
-- Park a Vehicle (Option 3): Register a plate number (e.g., RAA101A). The allocation algorithm assigns the first matching available slot.
+- Park a Vehicle (Option 3): Register a plate number (e.g., RAC123A or RAD123A). The allocation algorithm assigns the first matching available slot.
 - Simulate Exit Processing (Option 4): Enter the plate number during exit processing. You can optionally simulate elapsed time blocks to verify calculation logic.
 - Review Revenue Metrics (Option 9): Check the aggregated financial metrics from all completed transactions.
 

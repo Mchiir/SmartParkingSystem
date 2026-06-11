@@ -14,7 +14,7 @@
 class ParkingSystem {
 private:
     // Core DSA Structures
-    std::vector<ParkingSlot> slots; 
+    std::vector<ParkingSlot> slots;
     std::unordered_map<std::string, ActiveParkingVehicle> activeVehicles; 
     std::vector<ParkingRecord> history;
 
